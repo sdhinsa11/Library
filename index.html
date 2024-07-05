@@ -6,30 +6,54 @@
     <title>Library</title>
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="script.js"></script>
+    
 
 </head>
 <body>
+    <div class = "container">
 
-    <div class = "header">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path d="M12 21.5C10.65 20.65 8.2 20 6.5 20C4.85 20 3.15 20.3 1.75 21.05C1.65 21.1 1.6 21.1 1.5 21.1C1.25 21.1 1 20.85 1 20.6V6C1.6 5.55 2.25 5.25 3 5C4.11 4.65 5.33 4.5 6.5 4.5C8.45 4.5 10.55 4.9 12 6C13.45 4.9 15.55 4.5 17.5 4.5C18.67 4.5 19.89 4.65 21 5C21.75 5.25 22.4 5.55 23 6V20.6C23 20.85 22.75 21.1 22.5 21.1C22.4 21.1 22.35 21.1 22.25 21.05C20.85 20.3 19.15 20 17.5 20C15.8 20 13.35 20.65 12 21.5M11 7.5C9.64 6.9 7.84 6.5 6.5 6.5C5.3 6.5 4.1 6.65 3 7V18.5C4.1 18.15 5.3 18 6.5 18C7.84 18 9.64 18.4 11 19V7.5M13 19C14.36 18.4 16.16 18 17.5 18C18.7 18 19.9 18.15 21 18.5V7C19.9 6.65 18.7 6.5 17.5 6.5C16.16 6.5 14.36 6.9 13 7.5V19Z" /></svg>
-        <h1>Library Tracker</h1>
+        <div class = "header">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path d="M12 21.5C10.65 20.65 8.2 20 6.5 20C4.85 20 3.15 20.3 1.75 21.05C1.65 21.1 1.6 21.1 1.5 21.1C1.25 21.1 1 20.85 1 20.6V6C1.6 5.55 2.25 5.25 3 5C4.11 4.65 5.33 4.5 6.5 4.5C8.45 4.5 10.55 4.9 12 6C13.45 4.9 15.55 4.5 17.5 4.5C18.67 4.5 19.89 4.65 21 5C21.75 5.25 22.4 5.55 23 6V20.6C23 20.85 22.75 21.1 22.5 21.1C22.4 21.1 22.35 21.1 22.25 21.05C20.85 20.3 19.15 20 17.5 20C15.8 20 13.35 20.65 12 21.5M11 7.5C9.64 6.9 7.84 6.5 6.5 6.5C5.3 6.5 4.1 6.65 3 7V18.5C4.1 18.15 5.3 18 6.5 18C7.84 18 9.64 18.4 11 19V7.5M13 19C14.36 18.4 16.16 18 17.5 18C18.7 18 19.9 18.15 21 18.5V7C19.9 6.65 18.7 6.5 17.5 6.5C16.16 6.5 14.36 6.9 13 7.5V19Z" /></svg>
+            <h1>Library Tracker</h1>
+        </div>
+
+        <div class = "main"> 
+            <dialog id="addbookdialog">
+                <form id="addBookForm">
+                    <label for="title"> Title:</label><br>
+                    <input type = "text" id="title" name ="title"><br>
+
+                    <label for="author">Author:</label><br>
+                    <input type = "text" id="author" name ="author"><br>
+
+                    <label for="pages">Pages:</label><br>
+                    <input type = "text" id="pages" name ="pages"><br>
+
+                    <input type="checkbox" id="read" name="read" checked/>
+                    <label for="read">Read</label>
+
+                    <div>
+                        <button type="button" value="cancel" formmethod="dialog" id="cancelButton" >Cancel</button>
+                        <button type="submit" id="add">Add Book</button>
+                    </div>
+                </form>
+            </dialog>
+
+            <div class = "new-btn">
+                <button type="button" class = "newbutton" id="newButton">New Book</button>
+            </div>
+            <output></output>
+            
+            <!-- make this scrollable in css -->
+            <div class = "books"></div>
+
+        </div>
+
+        <div class = "footer">
+            <p> @ My Virtual Library App by Sohana Dhinsa </p>
+        </div>
     </div>
 
-    <div class = "main"> 
-        <button type="button">New Book</button>
-        
-        <!-- make this scrollable in css -->
-        <div class = "books"></div>
-
-        <!-- use the modal/dialog for this when u press the add button-->
-        <div class = "form"></div>
-    </div>
-
-    <div class = "footer">
-        <p> @ My Virtual Library App by Sohana Dhinsa </p>
-    </div>
-
-    
+    <script src="script.js"></script>
 </body>
 </html>

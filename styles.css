@@ -1,1 +1,100 @@
 /* add the cards using js and everything but styke them on here with some dummy style */
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.container{
+    display:grid;
+    grid-template-rows: 100px 5fr 50px;
+    height: 100vh;
+}
+
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#114538;
+
+    color:azure;
+}
+
+.main{
+    background-color: #d2e1cc;
+
+    display: grid;
+    grid-template-rows:40px 1fr;
+}
+
+.new-btn{
+    display:flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.button{
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    
+    border-radius: 20px;
+}
+
+.books{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-top: 20px;
+    margin-left: 55px;
+
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100vh - 190px);
+}
+
+.book-card{
+    display:flex;
+    height: 200px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+
+.btns {
+    display: flex;
+    gap: 100px; /* Adjust the gap size as needed */
+}
+
+.removeButton, .readButton{
+    width: 100px; 
+    height: 25px;
+    /* padding: 5px; */
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    border:none;
+
+    background-color: #5e8d83;
+
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f444c;
+
+    color:white;
+
+}
